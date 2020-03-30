@@ -3,8 +3,10 @@ library(gmodels)
 library(daewr)
 library(agricolae)
 library(lsmeans)
-
-
+library(rsm)
+library(pid)
+library(daewr)
+library(FrF2)
 #----------------------#
 #Plan de aleatorización#
 #----------------------#
@@ -153,13 +155,10 @@ lines(1:2, mediaC, col=2, lty=2, type = 'b', pch=19)
 
 
 #modelos 
-
-
 mod1 <- lm( Y ~ A*B*C,data = data_exp)
 summary(mod1)
-# Datos con innputacion de datos atipicos
 
-
+paretoPlot
 
 #---------------------------#
 # Datos con imputaciones    #
